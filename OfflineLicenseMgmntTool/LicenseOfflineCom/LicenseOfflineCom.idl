@@ -1,0 +1,37 @@
+// LicenseOfflineCom.idl : IDL source for LicenseOfflineCom
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (LicenseOfflineCom.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(e674de2f-ffb6-41f5-8eef-bf625f3011e7),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IOfflineLicenseValidityChecker : IDispatch
+{
+	[id(1)] HRESULT CheckSWValidity();
+};
+[
+	uuid(13e26d18-52ce-47db-aa46-4ea9279ffd9f),
+	version(1.0),
+]
+library LicenseOfflineComLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(f7af9d31-717b-404b-ae60-49f485c43da0)
+	]
+	coclass OfflineLicenseValidityChecker
+	{
+		[default] interface IOfflineLicenseValidityChecker;
+	};
+};
+
+import "shobjidl.idl";

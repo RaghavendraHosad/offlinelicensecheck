@@ -1,0 +1,18 @@
+// offlinelisenceComDll.idl : IDL source for offlinelisenceComDll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (offlinelisenceComDll.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(c591d639-8f54-47a9-9fd1-79a72672bcb7),
+	version(1.0),
+]
+library offlinelisenceComDllLib
+{
+	importlib("stdole2.tlb");
+};
+
